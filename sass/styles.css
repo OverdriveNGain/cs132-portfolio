@@ -112,6 +112,9 @@ body header li {
 body section {
   padding: 3em 0em;
 }
+body section#hero {
+  padding-top: 8em;
+}
 body section#hero .circle {
   width: 4em;
   height: 4em;
