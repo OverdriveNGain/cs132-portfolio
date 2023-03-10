@@ -4,6 +4,11 @@ $logo-red: rgb(201, 66, 66);
 $logo-green: rgb(78, 130, 108);
 $logo-blue: rgb(4, 104, 140);
 
+$bp-z: 0px;
+$bp-xs: 768px;
+$bp-s: 992px;
+$bp-m: 1200px;
+
 body {
     margin: 0px;
     font-family: 'Space Grotesk', sans-serif;
@@ -14,6 +19,7 @@ body {
         padding-left: 15px;
         margin-right: auto;
         margin-left: auto;
+        max-width: 100vw;
     }
     @media (min-width: 768px) {
         .container {
@@ -63,10 +69,7 @@ body {
         flex-grow:1;
     }
 
-    h1 {
-        font-size:4em;
-    }
-
+    // SPLIT 3-2
     .split-3-2{
         display: flex;
     }
@@ -75,7 +78,21 @@ body {
         flex: 3;
     }
     .split-3-2 > div:nth-child(2){flex: 2;}
+    @media (max-width: $bp-m) {
+        .split-3-2{
+            display: block;
+        }
+        .split-1-1 > div:nth-child(1){
+            padding-right:0em;
+        }
+    }
+    
+    .left-border{
+        border-left: 10px solid rgb(185, 185, 185);
+        padding-left: 0.7em;
+    }
 
+    // SPLIT 1-1
     .split-1-1{
         display: flex;
     }
@@ -84,7 +101,16 @@ body {
         flex: 1;
     }
     .split-1-1 > div:nth-child(2){flex: 1;}
+    @media (max-width: $bp-m) {
+        .split-1-1{
+            display: block;
+        }
+        .split-1-1 > div:nth-child(1){
+            padding-right:0em;
+        }
+    }
 
+    // SPLIT 3-1
     .split-3-1{
         display: flex;
     }
@@ -114,6 +140,10 @@ body {
                 color:rgb(158, 158, 158);
             }
         }
+    }
+    
+    img {
+        max-width: 100%;
     }
 
     header {
@@ -174,12 +204,24 @@ body {
     section#hero{
         padding-top: 8em;
 
+        @media (max-width: $bp-m) {
+            .split-1-1{
+                text-align: center;
+            }
+        }
+
         .circle {
             width: 4em;
             height: 4em;
             border-radius: 9999px;
             display: inline-block;
             margin: 0em 2em;
+
+            @media (max-width: $bp-m) {
+                width: 2em;
+                height: 2em;
+                margin: 2em;
+            }
         }
 
         .bg-red {background-color: $logo-red;}
@@ -192,6 +234,15 @@ body {
 
         p{
             margin-top: 0px;
+        }
+
+        h1 {
+            font-size:4em;
+
+            @media (max-width: $bp-m) {
+                font-size:3em;
+                text-align: center;
+            }
         }
     }
 
@@ -206,10 +257,18 @@ body {
 
         h2{
             margin: 0em 6em;
+
+            @media (max-width: $bp-m) {
+                margin: 0em;
+            }
         }
 
         p.description{
             margin: 2em 9em 2em 9em;
+
+            @media (max-width: $bp-m) {
+                margin: 2em 0em;
+            }
         }
 
         ul.references {
@@ -221,20 +280,34 @@ body {
             flex-direction: row;
             width: 100%;
             gap: 1.5em;
+
+            @media (min-width: $bp-z) and (max-width: $bp-m){
+                flex-direction: column;
+            }  
         }
 
         .taxcase-card{
             flex: 1;
-            display:inline-block;
+            display:flex;
+            flex-direction:column;
             width: 100%;
             border-radius: 1em;
             overflow:hidden;
             background-color: black;
 
+            @media (min-width: $bp-z) and (max-width: $bp-m){
+                flex-direction:row;
+                align-items: center;
+            }
+
             .img-holder {
                 width: 100%;
                 // height: 100px;
                 aspect-ratio: 1;
+
+                @media (min-width: $bp-z) and (max-width: $bp-m){
+                    width: 25%;
+                }
             }
 
             img {
@@ -353,11 +426,19 @@ body {
             margin-bottom:10em;
             gap:1em;
 
+            @media (min-width: $bp-z) and (max-width: $bp-m){
+                flex-direction: column;
+            }    
+
             .card {
                 background-color: black;
                 color: white;
                 padding:2em;
                 border-radius: 1em;
+                
+                p {
+                    margin-bottom:0;
+                }
             }
 
             h3 {
@@ -386,6 +467,10 @@ body {
             gap: 1em;
             width: 100%;
             margin: 4em 0em;
+
+            @media (max-width: $bp-m) {
+                flex-direction: column;
+            }
         }
 
         ul.memlist > li {
@@ -402,6 +487,12 @@ body {
                 width: 100%;
                 // height: 100px;
                 aspect-ratio: 1;
+
+                @media (min-width: $bp-z) and (max-width: $bp-m){
+                    width: 25%;
+                    float: left;
+                    margin: 2em 1em 1em 2em;
+                }
             }
 
             img {
