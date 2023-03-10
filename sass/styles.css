@@ -28,12 +28,37 @@ body .container {
 body .red-text {
   color: rgb(201, 66, 66);
 }
-body a {
-  color: black;
-  text-decoration-line: none;
+body .red-text-flicker { /* Safari 4+ */ /* Fx 5+ */ /* Opera 12+ */
+  animation: redflicker 3s infinite; /* IE 10+, Fx 29+ */
 }
-body a:hover {
-  color: rgb(4, 104, 140);
+@keyframes redflicker {
+  0%, 49% {
+    color: rgb(201, 66, 66);
+  }
+  50%, 51% {
+    color: rgb(148, 0, 0);
+  }
+  52%, 55% {
+    color: rgb(201, 66, 66);
+  }
+  56%, 57% {
+    color: rgb(148, 0, 0);
+  }
+  58%, 75% {
+    color: rgb(201, 66, 66);
+  }
+  76%, 77% {
+    color: rgb(148, 0, 0);
+  }
+  78%, 90% {
+    color: rgb(201, 66, 66);
+  }
+  91%, 92% {
+    color: rgb(148, 0, 0);
+  }
+  93%, 100% {
+    color: rgb(201, 66, 66);
+  }
 }
 body ul {
   list-style-type: none;
@@ -79,6 +104,21 @@ body p {
   -webkit-margin-after: 2em;
           margin-block-end: 2em;
 }
+body ul.references {
+  font-size: medium;
+  color: rgb(158, 158, 158);
+  font-style: italic;
+}
+body ul.references::before {
+  content: "References: ";
+}
+body ul.references li {
+  display: inline;
+}
+body ul.references li a {
+  text-decoration: underline;
+  color: rgb(158, 158, 158);
+}
 body header {
   padding: 1em 0em;
   box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.3);
@@ -108,6 +148,17 @@ body header li {
   display: inline;
   padding: 0em 2em;
   text-align: center;
+}
+body header a {
+  color: black;
+  text-decoration-line: none;
+}
+body header a:hover {
+  color: rgb(4, 104, 140);
+}
+body header .disabled {
+  opacity: 30%;
+  pointer-events: none;
 }
 body section {
   padding: 3em 0em;
@@ -147,7 +198,10 @@ body section#background h2 {
   margin: 0em 6em;
 }
 body section#background p.description {
-  margin: 2em 9em 4em 9em;
+  margin: 2em 9em 2em 9em;
+}
+body section#background ul.references {
+  margin-bottom: 7em;
 }
 body section#background .taxcases {
   display: flex;
