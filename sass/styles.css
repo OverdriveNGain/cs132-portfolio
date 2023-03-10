@@ -334,20 +334,19 @@ body footer ul.memlist > li .meminfo h4 {
   margin-top: 0em;
 }
 body footer ul.memlist > li ul.contacts li {
-  display: inline;
-  padding-right: 0.7em;
-  margin-right: 0.4em;
-  border-right: 2px solid white;
+  margin-bottom: 0.2em;
+  color: white;
+  text-decoration-line: underline;
 }
-body footer ul.memlist > li ul.contacts li:last-child {
-  border-right: none;
+body footer ul.memlist > li ul.contacts li:hover {
+  color: yellow;
 }
 body footer ul.memlist > li ul.contacts li a {
   color: white;
+  margin-left: 0.4em;
 }
 body footer ul.memlist > li ul.contacts li a:hover {
-  text-decoration-line: underline;
-  color: white;
+  color: yellow;
 }
 body footer .groupemail {
   display: inline-block;
