@@ -320,13 +320,18 @@ body section#datacollection .card1 {
   padding: 2em 3em;
 }
 body section#datacollection .card1 li {
-  border: 1px solid white;
   display: inline-block;
+}
+body section#datacollection .card1 a {
+  color: white;
+  display: inline-block;
+  border: 1px solid white;
   border-radius: 99px;
   padding: 0.2em 0.6em;
   margin: 0.2em 0.1em;
+  text-decoration: none;
 }
-body section#datacollection .card1 li:hover {
+body section#datacollection .card1 a:hover {
   background-color: white;
   color: black;
 }
