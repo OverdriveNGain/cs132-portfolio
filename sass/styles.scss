@@ -9,6 +9,10 @@ $bp-xs: 768px;
 $bp-s: 992px;
 $bp-m: 1200px;
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0px;
     font-family: 'Space Grotesk', sans-serif;
