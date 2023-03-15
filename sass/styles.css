@@ -279,12 +279,22 @@ body section#background .taxcase-card {
   overflow: hidden;
   background-color: black;
 }
+
 @media (min-width: 0px) and (max-width: 1200px) {
   body section#background .taxcase-card {
     flex-direction: row;
     align-items: center;
   }
 }
+
+body section#background .taxcase-card .link{
+  all:inherit;
+}
+
+body section#background .taxcase-card .link:hover{
+  cursor:pointer;
+}
+
 body section#background .taxcase-card .img-holder {
   width: 100%;
   aspect-ratio: 1;
