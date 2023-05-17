@@ -207,9 +207,35 @@
 			</li>
 		</ul>
 	</section>
-	<section id="NLP" class="container">
+	<section id="preprocessing" class="container">
+		<p>Preprocessing</p>
+		<div>
+			<h2>The steps we took to make sure our data is <span class="red-text-flicker">sufficient, and clean</span> for inferential statistics</h2>
+		</div>
+		<div>
+			<div class="left-border">
+				<h3>Handling Missing values</h3>
+				<p>When we check for columns with missing values, the columns 'Account bio', 'Tweet Translated', 'Screenshot', 'Remarks', 'Reviewer' and 'Review' 
+				all had missing values, but they are deemed unnecessary for our data exploration so they are left as is. 
+				</p>
+				<p>The column 'Views' is also disregarded since all the tweets were posted before Dec. 22, 2022, when the Views feature was added to Twitter.
+				</p>
+				<p>The column 'Location' might be useful for the data exploration. Hence, we will use data imputation to handle the missing values in each column.
+				</p>
+			</div>
+			<div class="left-border">
+				<h3>Null Hypothesis</h3>
+				<p>Tweets equally used appeal to credibility, emotion, and logic to persuade other users into believing ABS CBN committed tax evasion.</p>
+			</div>
+			<div class="left-border">
+				<h3>Action Plan</h3>
+				<p>Analyze the content of tweets that posted mis/disinformation about ABS&nbsp;-&nbsp;CBN’s tax payment.</p>
+			</div>
+		</div>
+	</section>
+  	<section id="NLP" class="container">
 		<p>Before we could begin the analysis</p>
-		<div class="split-1-1">
+		<div class="">
 			<div>
 				<h2>We performed <span class="red-text-flicker">Natural Language Processing</span> in order to preprocess the raw tweets to make it easier to understand and process.</h2>
 			</div>
@@ -252,9 +278,8 @@
 					<h3>Getting the most Frequent Words</h3>
 					<p>From the lemmatized tweets, we took the most frequent words used by tweets from each of the three types of appeals that we want to analyze: logic, emotional and credibility.	</p>
 				</div>
-			</div>
-		</div>
-	</section>
+    </div>
+  </section>
 	<section id="results" class="container">
 		<p>Results</p>
 		<div class="split-3-2">
