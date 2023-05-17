@@ -203,6 +203,54 @@
 			</li>
 		</ul>
 	</section>
+	<section id="ledtoask" class="container">
+		<p>Before we could begin the analysis</p>
+		<div class="split-1-1">
+			<div>
+				<h2>We performed <span class="red-text-flicker">Natural Language Processing</span> in order to preprocess the raw tweets to make it easier to understand and process.</h2>
+			</div>
+			<div>
+				<div class="left-border">
+					<h3>Cleaned the Tweets</h3>
+					<p><strong>Manual Cleaning:</strong> Because the majority of the tweets were in Filipino, they had to be manually cleaned to ensure that the translation would be more accurate. Here are some key parts of the manual cleaning:
+						<ul>
+							<li>1. Changing Filipino slang to improve accuracy (changing shorthand Filipino to the formal word)</li>
+							<li>2. Lemmatizing specific, non-english terms (words referring to ABS-CBN to “abscbn”, Bong Bong Marcos to “BBM”, Rodrigo Duterte to “RRD”)</li>
+							<li>3. Lemmatizing groups of special category of words (bobo, tanga, kupal as “insult”; haha, hahaha, HAHAHAH as “laughter”)
+							</li>
+						</ul>
+					</p>
+
+					<p><strong>Automated Cleaning:</strong> Handled emojis and emoticons and converted them to text
+
+				</div>
+				<div class="left-border">
+					<h3>Translated the Tweets</h3>
+					<p> GoogleTrans was used to translate the cleaned raw tweets from Filipino to English. The translation was further cleaned by 
+						<ul>
+							<li>1. Lowercasting the translated tweets</li>
+							<li>2. Removing punctuation marks</li>
+							</li>
+						</ul>
+					</p>
+
+				</div>
+				<div class="left-border">
+					<h3>Manually Checked the Translation</h3>
+					<p>The Google Sheets was updated to include the translated tweets. The translations were then checked manually to improve the context accuracy, fix erroneous spacing and catch mistakes. After updating, the new data was pulled to be used in the analysis.
+					</p>
+				</div>
+				<div class="left-border">
+					<h3>Processing the Translated Tweets</h3>
+					<p>The translated tweets were cleaned by removing the stop words and were then tokenizedfor stemming and lemmatization.	</p>
+				</div>
+				<div class="left-border">
+					<h3>Getting the most Frequent Words</h3>
+					<p>From the lemmatized tweets, we took the most frequent words used by tweets from each of the three types of appeals that we want to analyze: logic, emotional and credibility.	</p>
+				</div>
+			</div>
+		</div>
+	</section>
 	<section id="results" class="container">
 		<p>Results</p>
 		<div class="split-3-2">
