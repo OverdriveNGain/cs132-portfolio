@@ -220,16 +220,30 @@
 				</p>
 				<p>The column 'Views' is also disregarded since all the tweets were posted before Dec. 22, 2022, when the Views feature was added to Twitter.
 				</p>
-				<p>The column 'Location' might be useful for the data exploration. Hence, we will use data imputation to handle the missing values in each column.
+			</div>
+			<div class="left-border">
+				<h3>Ensuring Formatting Consistency</h3>
+				<p>To ensure formatting consistency, we have formatted all of the data as per instructions when we collected our data using our Python algorithm. 
 				</p>
 			</div>
 			<div class="left-border">
-				<h3>Null Hypothesis</h3>
-				<p>Tweets equally used appeal to credibility, emotion, and logic to persuade other users into believing ABS CBN committed tax evasion.</p>
+				<h3>Categorical Data Encoding</h3>
+				<p>The columns 'Account type', 'Tweet Type', 'Content type', 'Rating', and 'Appeal' have qualitative data which can be encoded using numerical values. 
+				</p>
+				<p>We used numbers starting from 1 to maximum amount of categories for a parameter to encode the categories.
+				</p>
 			</div>
 			<div class="left-border">
-				<h3>Action Plan</h3>
-				<p>Analyze the content of tweets that posted mis/disinformation about ABS&nbsp;-&nbsp;CBN’s tax payment.</p>
+				<h3>Standardization</h3>
+				<p>We used the mean and z-scores to standardize some of the categories like 'Following', 'Followers', 'Likes', 'Replies', 'Retweets', 
+					and 'Quote Tweets' to get an overview on what the average interaction of a tweet containing mis/disinformation regarding ABS-CBN Tax Evasion.
+				</p>
+			</div>
+			<div class="left-border">
+				<h3>Dealing With Outliers</h3>
+				<p>Outliers show that there are data gathered that exceed average expectations. This could cause skewed distributions in standardization of the data and may cause abnormalities in the modeling stage.</p>
+				<p>However, the outliers also show some meaning behind the interactions that tweets containing mis/disinformation. Tweets that contain high interaction are few and far in between and users that have high followings are rare.</p>
+				<p>Hence, the outliers are left as is.</p>
 			</div>
 		</div>
 	</section>
