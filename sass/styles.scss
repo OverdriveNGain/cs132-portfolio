@@ -434,6 +434,10 @@ body {
                             transform: rotateZ(1turn);
                         }
 
+                        &.pill:hover {
+                            cursor:pointer;
+                        }
+
                         color:white;
                         font-size: 3em;
                         padding: 0em;

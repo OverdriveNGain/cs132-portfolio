@@ -411,6 +411,9 @@ body section#methods ul.method-list .methodItem .tile button#pill3:hover {
 body section#methods ul.method-list .methodItem .tile button.pill.expanded {
   transform: rotateZ(1turn);
 }
+body section#methods ul.method-list .methodItem .tile button.pill:hover {
+  cursor: pointer;
+}
 body section#methods ul.method-list .methodItem .tile div:nth-child(2) {
   flex: 1;
   width: 100%;
