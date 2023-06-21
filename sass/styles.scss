@@ -157,6 +157,7 @@ body {
         width: 100%;
         background-color: white;
         top:0px;
+        z-index: 999;
 
         img {
             width:50px;
@@ -290,14 +291,16 @@ body {
             }  
         }
 
-        .taxcase-card{
+        .taxcase-card a{
             flex: 1;
             display:flex;
             flex-direction:column;
             width: 100%;
+            height: 100%;
             border-radius: 1em;
             overflow:hidden;
             background-color: black;
+            text-decoration: none;;
 
             @media (min-width: $bp-z) and (max-width: $bp-m){
                 flex-direction:row;
@@ -307,10 +310,14 @@ body {
             .img-holder {
                 width: 100%;
                 // height: 100px;
+                flex: 1;
                 aspect-ratio: 1;
 
                 @media (min-width: $bp-z) and (max-width: $bp-m){
-                    width: 25%;
+                    flex-direction:row;
+                    align-items: center;
+                    flex: none;
+                    width: 10em;
                 }
             }
 
@@ -328,9 +335,9 @@ body {
             }
         }
 
-        .taxcase-card:nth-child(1) {box-shadow: 5px 5px 0px $logo-red;}
-        .taxcase-card:nth-child(2) {box-shadow: 5px 5px 0px $logo-green;}
-        .taxcase-card:nth-child(3) {box-shadow: 5px 5px 0px $logo-blue;}
+        .taxcase-card:nth-child(1) a {box-shadow: 5px 5px 0px $logo-red;}
+        .taxcase-card:nth-child(2) a {box-shadow: 5px 5px 0px $logo-green;}
+        .taxcase-card:nth-child(3) a {box-shadow: 5px 5px 0px $logo-blue;}
     }
 
     section#datacollection {
@@ -386,43 +393,103 @@ body {
 
     section#methods {
         ul.method-list {
-
-            li {
+            .methodItem {
                 border-bottom: 2px solid rgb(177, 177, 177);
 
                 &:last-child {
                     border-bottom: none;
                 }
 
-                div {
+                .tile {
                     display: flex;
                     flex-direction: row;
                     align-items: center;
                     gap: 1em;
-    
-                    .pill1 {background-color: $logo-red;}
-                    .pill2 {background-color: $logo-green;}
-                    .pill3 {background-color: $logo-blue;}
-    
-                    div:nth-child(1) {
-                        display: inline-block;
-                        width: 6em;
-                        height: 2.5em;
-                        border-radius: 999em;;
+                    padding: 1em 0em 1em 0em;
+
+                    button {
+                        transform: rotateZ(0turn);
+                        transition: all 0.3s ease-in-out;
+
+                        &#pill1 {
+                            background-color: $logo-red;
+                            &:hover {
+                                background-color: lighten($logo-red, 20%);
+                            }
+                        }
+                        &#pill2 {
+                            background-color: $logo-green;
+                            &:hover {
+                                background-color: lighten($logo-green, 20%);
+                            }
+                        }
+                        &#pill3 {
+                            background-color: $logo-blue;
+                            &:hover {
+                                background-color: lighten($logo-blue, 20%);
+                            }
+                        }
+
+                        &.pill.expanded {
+                            transform: rotateZ(1turn);
+                        }
+
+                        color:white;
+                        font-size: 3em;
+                        padding: 0em;
+                        width: 1em;
+                        height: 1em;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        border-radius: 999em;
+                        border: 0em;
                     }
         
                     div:nth-child(2) {
                         flex: 1;
                         width: 100%;
+                        margin-left: 1em;
     
                         h2 {
                             width: 100%;
-                            text-align: center;
+                            text-align: left;
                         }
                     }
         
                     div:nth-child(3) {
-                            flex: 1;
+                        flex: 2;
+
+                        p {
+                            margin: 0em;
+                        }
+                    }
+                }
+
+                .hideable{
+                    margin-left: 5em;
+                    transition: all 0.3s ease-in-out;
+                    height: 0px;
+                    width: calc(100% - 5em);
+                    overflow: hidden;
+                    position: relative;
+                    display: inline-block;
+                    transform: translateY(-0.9em);
+
+                    ul {
+                        li {
+                            list-style-type: disc;
+                            margin-left: 2em;
+
+                            span.grey {
+                                color: rgb(165, 165, 165);
+                            }
+                        }
+                    }
+                    
+                    .hideableContent{
+                        position: absolute;
+                        width: 100%
                     }
                 }
             }
