@@ -5,6 +5,15 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Data Science Portfolio - ABSCBN Tax Evasion</title>
+
+	<link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="manifest" href="/site.webmanifest">
+	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+	<meta name="msapplication-TileColor" content="#603cba">
+	<meta name="theme-color" content="#ffffff">
+
 	<link rel="stylesheet" href="sass/styles.css">
 
 	<script src="https://kit.fontawesome.com/cad6e051d3.js" crossorigin="anonymous"></script>
@@ -15,6 +24,16 @@
 		<div class="container">
 			<img src="images/header_logo.png" alt="ABS CBN Logo ">
 			<nav>
+				<div class="navDesktop">
+					<ul>
+						<li><a onclick="navButtonClick()" href="#">Home</a></li>
+						<li><a onclick="navButtonClick()" href="#background">Background</a></li>
+						<li><a onclick="navButtonClick()" href="#datacollection">Data</a></li>
+						<li><a onclick="navButtonClick()" href="#methods">Methods</a></li>
+						<li><a onclick="navButtonClick()" href="#conclusion">Conclusion</a></li>
+						<li><a onclick="navButtonClick()" href="#team">Team</a></li>
+					</ul>
+				</div>
 				<div class="ulHolder">
 					<ul>
 						<li><a onclick="navButtonClick()" href="#">Home</a></li>
@@ -186,7 +205,7 @@
 				<div class="tile">
 					<button type="button" onclick="methodClick(1)" id="pill1" class="pill"><span>+</span></button>
 					<div class="info">
-						<h2 class="title">Pareprocessing</h2>
+						<h2 class="title">Preprocessing</h2>
 						<p class="desc">Data is never clean when we first collect it. There are always missing values or incorrect formats. An important first step to our data exploration is handling missing data, ensuring formatting consistency
 							as well as applying some inferential statistics by encoding categorical data and standardizing.</p>
 					</div>
@@ -377,7 +396,7 @@
 			}
 			else {
 				ulHolder.classList.add('expanded');
-				ulHolder.style.height = `${document.querySelector('.ulHolder ul').offsetHeight}px`;
+				ulHolder.style.height = `${document.querySelector('.ulHolder ul').offsetHeight + 10}px`; // +10 for shadow
 			}
 		}
 	</script>

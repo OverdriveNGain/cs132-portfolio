@@ -201,22 +201,16 @@ body {
             margin-top: auto;
             margin-bottom: auto;
             display: flex;
-
-            .ulHolder{
+            
+            .navDesktop{
                 width: 100%;
-                transition: height 0.3s ease-in-out;
+                
                 // {default}
-                position: absolute;
-                right:0px;
-                top:100%;
-                height:0%;
-                overflow: hidden;
-                &.expanded{
-                    height:100%;
-                }
+                display:none;
                 @media (min-width: $bp-xs) {}
                 @media (min-width: $bp-s) {}
                 @media (min-width: $bp-m) {
+                    display: block;
                     position: static;
                     &.expanded{
                         height:auto;
@@ -227,43 +221,21 @@ body {
                     justify-content: center;
                     margin: 0px;
                     display: flex;
-                    
-                    // {default}
-                    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.3);
-                    background-color: lighten($logo-red, 40%);
-                    flex-direction: column;
-                    position: absolute;
-                    right:0em;
-                    @media (min-width: $bp-xs) {
-                        right:2em;
-                    }
-                    @media (min-width: $bp-s) {
-                    }
-                    @media (min-width: $bp-m) {
-                        flex:1;
-                        background-color: white;
-                        box-shadow: none;
-                        flex-direction: row;
-                        position: static;
-                        right:0px;
-                        top:0%;
-                    }
+                    flex:1;
+                    background-color: white;
+                    box-shadow: none;
+                    flex-direction: row;
+                    position: static;
+                    right:0px;
+                    top:0%;
     
                     li {
                         display:inline;
-                        // {default}
-                        text-align: left;
+                        padding: 0em;
+                        text-align: center;
+                        flex: 1;
                         &:hover{
-                            background-color: lighten($logo-red, 20%);
-                        }
-                        @media (min-width: $bp-xs) {}
-                        @media (min-width: $bp-s) {}
-                        @media (min-width: $bp-m) {
-                            padding: 0em;
-                            text-align: center;
-                            &:hover{
-                                background-color: white;
-                            }
+                            background-color: white;
                         }
     
                         a {
@@ -271,23 +243,59 @@ body {
                             text-decoration-line: none;
                             width: 100%;
                             display:block;
-                            
-                            // {default}
-                            padding: 0.4em 0.8em;
-                            @media (min-width: $bp-xs) {}
-                            @media (min-width: $bp-s) {}
-                            @media (min-width: $bp-m) {
-                                padding: 0em 1em;
-                            }
+                            padding: 0em 1em;
                             
                             &:hover {
-                                // {default}
-                                @media (min-width: $bp-xs) {}
-                                @media (min-width: $bp-s) {}
-                                @media (min-width: $bp-m) {
-                                    color: $logo-blue;
-                                }
+                                color: $logo-blue;
                             }
+                        }
+                    }
+                }
+            }
+
+            .ulHolder{
+                @media (min-width: $bp-m) {
+                    display:none;
+                }
+
+                width: 100%;
+                transition: height 0.3s ease-in-out;
+                position: absolute;
+                right:0px;
+                top:100%;
+                height:0%;
+                overflow: hidden;
+
+                &.expanded{
+                    height:100%;
+                }
+
+                ul {
+                    justify-content: center;
+                    margin: 0px;
+                    display: flex;
+                    
+                    box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.3);
+                    background-color: lighten($logo-red, 40%);
+                    flex-direction: column;
+                    position: absolute;
+                    right:0em;
+                    @media (min-width: $bp-xs) {
+                        right:2em;
+                    }
+    
+                    li {
+                        &:hover{
+                            background-color: lighten($logo-red, 20%);
+                        }
+    
+                        a {
+                            color:black;
+                            text-decoration-line: none;
+                            width: 10em;
+                            display:block;
+                            margin: 0.4em 0em;
+                            text-align: center;
                         }
                     }
                 }

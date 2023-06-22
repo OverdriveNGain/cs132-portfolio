@@ -186,6 +186,50 @@ body header nav {
   margin-bottom: auto;
   display: flex;
 }
+body header nav .navDesktop {
+  width: 100%;
+  display: none;
+}
+@media (min-width: 1200px) {
+  body header nav .navDesktop {
+    display: block;
+    position: static;
+  }
+  body header nav .navDesktop.expanded {
+    height: auto;
+  }
+}
+body header nav .navDesktop ul {
+  justify-content: center;
+  margin: 0px;
+  display: flex;
+  flex: 1;
+  background-color: white;
+  box-shadow: none;
+  flex-direction: row;
+  position: static;
+  right: 0px;
+  top: 0%;
+}
+body header nav .navDesktop ul li {
+  display: inline;
+  padding: 0em;
+  text-align: center;
+  flex: 1;
+}
+body header nav .navDesktop ul li:hover {
+  background-color: white;
+}
+body header nav .navDesktop ul li a {
+  color: black;
+  text-decoration-line: none;
+  width: 100%;
+  display: block;
+  padding: 0em 1em;
+}
+body header nav .navDesktop ul li a:hover {
+  color: rgb(4, 104, 140);
+}
 body header nav .ulHolder {
   width: 100%;
   transition: height 0.3s ease-in-out;
@@ -195,22 +239,19 @@ body header nav .ulHolder {
   height: 0%;
   overflow: hidden;
 }
-body header nav .ulHolder.expanded {
-  height: 100%;
-}
 @media (min-width: 1200px) {
   body header nav .ulHolder {
-    position: static;
+    display: none;
   }
-  body header nav .ulHolder.expanded {
-    height: auto;
-  }
+}
+body header nav .ulHolder.expanded {
+  height: 100%;
 }
 body header nav .ulHolder ul {
   justify-content: center;
   margin: 0px;
   display: flex;
-  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.3);
+  box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.3);
   background-color: #f6e1e1;
   flex-direction: column;
   position: absolute;
@@ -221,49 +262,16 @@ body header nav .ulHolder ul {
     right: 2em;
   }
 }
-@media (min-width: 1200px) {
-  body header nav .ulHolder ul {
-    flex: 1;
-    background-color: white;
-    box-shadow: none;
-    flex-direction: row;
-    position: static;
-    right: 0px;
-    top: 0%;
-  }
-}
-body header nav .ulHolder ul li {
-  display: inline;
-  text-align: left;
-}
 body header nav .ulHolder ul li:hover {
   background-color: #e09191;
-}
-@media (min-width: 1200px) {
-  body header nav .ulHolder ul li {
-    padding: 0em;
-    text-align: center;
-  }
-  body header nav .ulHolder ul li:hover {
-    background-color: white;
-  }
 }
 body header nav .ulHolder ul li a {
   color: black;
   text-decoration-line: none;
-  width: 100%;
+  width: 10em;
   display: block;
-  padding: 0.4em 0.8em;
-}
-@media (min-width: 1200px) {
-  body header nav .ulHolder ul li a {
-    padding: 0em 1em;
-  }
-}
-@media (min-width: 1200px) {
-  body header nav .ulHolder ul li a:hover {
-    color: rgb(4, 104, 140);
-  }
+  margin: 0.4em 0em;
+  text-align: center;
 }
 @media (min-width: 1200px) {
   body header nav .spacer {
