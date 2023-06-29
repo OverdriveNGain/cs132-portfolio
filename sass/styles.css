@@ -461,6 +461,24 @@ body section#background .taxcase-card:nth-child(2) a {
 body section#background .taxcase-card:nth-child(3) a {
   box-shadow: 5px 5px 0px rgb(4, 104, 140);
 }
+body section#datacollection .title {
+  font-size: 3em;
+  font-weight: bold;
+  margin-top: 0em;
+  margin-bottom: 0em;
+  text-align: center;
+  margin-right: 0em;
+  display: inline;
+  width: 100%;
+}
+@media (min-width: 992px) {
+  body section#datacollection .title {
+    text-align: left;
+    margin-right: 1em;
+    display: block;
+    width: auto;
+  }
+}
 body section#datacollection .card1 {
   background-color: black;
   color: white;
@@ -502,35 +520,51 @@ body section#datacollection .card1 .keywords a:hover {
   background-color: white;
   color: black;
 }
-body section#datacollection .card1 .title {
-  font-size: 3em;
-  font-weight: bold;
-  margin-top: 0em;
-  margin-bottom: 0em;
-  text-align: center;
-  margin-right: 0em;
-  display: inline;
-  width: 100%;
-}
-@media (min-width: 992px) {
-  body section#datacollection .card1 .title {
-    text-align: left;
-    margin-right: 1em;
-    display: block;
-    width: auto;
-  }
-}
 body section#datacollection .card2 {
   background-color: black;
   color: white;
   border-radius: 1em;
   margin-top: 2em;
   box-shadow: 5px 5px 0px rgb(78, 130, 108);
-  padding: 2em 3em;
+  display: flex;
+  align-items: start;
+  padding: 0.4em 0.4em;
+  flex-direction: column;
 }
-body section#datacollection .card2 h2 {
-  font-size: 3em;
-  margin: 1em 0em;
+@media (min-width: 992px) {
+  body section#datacollection .card2 {
+    padding: 2em 3em;
+    flex-direction: row;
+  }
+}
+body section#datacollection .card2 ul {
+  text-align: center;
+}
+@media (min-width: 992px) {
+  body section#datacollection .card2 ul {
+    text-align: end;
+  }
+}
+body section#datacollection .card2 ul li {
+  display: inline-block;
+}
+body section#datacollection .card2 ul li a {
+  border: 1px solid white;
+  border-radius: 99px;
+  padding: 0.2em 0.6em;
+  margin: 0.2em 0.1em;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+}
+body section#datacollection .card2 ul li a img {
+  margin-right: 0.5em;
+  height: 1em;
+}
+body section#datacollection .card2 ul li a:hover {
+  background-color: white;
+  color: black;
 }
 body section#methods ul.method-list .methodItem {
   position: relative;

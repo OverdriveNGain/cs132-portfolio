@@ -509,8 +509,28 @@ body {
     }
 
     section#datacollection {
+        .title {
+            font-size: 3em;
+            font-weight: bold;
+            margin-top: 0em;
+            margin-bottom: 0em;
+
+            // {default}
+            text-align: center;
+            margin-right: 0em;
+            display: inline;
+            width:100%;
+            @media (min-width: $bp-xs) {}
+            @media (min-width: $bp-s) {
+                text-align: left;
+                margin-right: 1em;
+                display: block;
+                width:auto;
+            }
+            @media (min-width: $bp-m) {}
+        }
+
         .card1 {
-            
             // {default}
             background-color: black;
             color:white;
@@ -556,42 +576,86 @@ body {
                     color:black;
                 }
             }
-
-            .title {
-                font-size: 3em;
-                font-weight: bold;
-                margin-top: 0em;
-                margin-bottom: 0em;
-
-                // {default}
-                text-align: center;
-                margin-right: 0em;
-                display: inline;
-                width:100%;
-                @media (min-width: $bp-xs) {}
-                @media (min-width: $bp-s) {
-                    text-align: left;
-                    margin-right: 1em;
-                    display: block;
-                    width:auto;
-                }
-                @media (min-width: $bp-m) {}
-            }
         }
 
         .card2 {
+            
+            // {default}
             background-color: black;
             color:white;
             border-radius: 1em;
             margin-top: 2em;
             box-shadow: 5px 5px 0px $logo-green;
-            padding: 2em 3em;
-
-            h2 {
-                // text-align: right;
-                font-size: 3em;
-                margin: 1em 0em;
+            display: flex;
+            align-items: start;
+            padding: 0.4em 0.4em;
+            flex-direction: column;
+            @media (min-width: $bp-xs) {}
+            @media (min-width: $bp-s) {
+                padding: 2em 3em;
+                flex-direction: row;
             }
+            @media (min-width: $bp-m) {}
+
+            ul {
+                // {default}
+                text-align: center;
+                @media (min-width: $bp-xs) {}
+                @media (min-width: $bp-s) {
+                    text-align: end;
+                }
+                @media (min-width: $bp-m) {}
+
+                li {
+                    // display: flex;
+                    display: inline-block;
+                    
+                    a {
+                        border: 1px solid white;
+                        border-radius: 99px;
+                        padding: 0.2em 0.6em;
+                        margin: 0.2em 0.1em;
+
+                        display: flex;
+                        align-items: center;
+                        text-decoration: none;
+                        color:white;
+
+                        img {
+                            margin-right:0.5em;
+                            height: 1em;
+                        }
+
+                        &:hover {
+                            background-color: white;
+                            color:black;
+                        }
+                    }
+
+
+                }
+            }
+
+            // .title {
+            //     font-size: 3em;
+            //     font-weight: bold;
+            //     margin-top: 0em;
+            //     margin-bottom: 0em;
+
+            //     // {default}
+            //     text-align: center;
+            //     margin-right: 0em;
+            //     display: inline;
+            //     width:100%;
+            //     @media (min-width: $bp-xs) {}
+            //     @media (min-width: $bp-s) {
+            //         text-align: left;
+            //         margin-right: 1em;
+            //         display: block;
+            //         width:auto;
+            //     }
+            //     @media (min-width: $bp-m) {}
+            // }
         }
     }
 
