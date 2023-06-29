@@ -73,6 +73,14 @@ body {
         color: $logo-red;
     }
 
+    .code {
+        background-color: rgb(199, 199, 199);
+        color: black;
+        padding-left: 0.2em;
+        padding-right: 0.2em;
+        font-family: 'Courier New', Courier, monospace;
+    }
+
     .red-text-flicker {
         -webkit-animation: redflicker 3s infinite;  /* Safari 4+ */
         -moz-animation: redflicker 3s infinite;  /* Fx 5+ */
@@ -356,7 +364,7 @@ body {
     }
 
     section {
-        padding: 3em 0em;
+        padding: 2em 0em;
     }
 
     section#hero{
@@ -590,6 +598,7 @@ body {
     section#methods {
         ul.method-list {
             .methodItem {
+                position: relative;
                 border-bottom: 2px solid rgb(177, 177, 177);
 
                 &:last-child {
@@ -623,6 +632,12 @@ body {
                             background-color: $logo-blue;
                             &:hover {
                                 background-color: lighten($logo-blue, 20%);
+                            }
+                        }
+                        &#pill4 {
+                            background-color: $logo-red;
+                            &:hover {
+                                background-color: lighten($logo-red, 20%);
                             }
                         }
 
@@ -680,10 +695,10 @@ body {
                 .hideable{
                     transition: all 0.3s ease-in-out;
                     height: 0px;
-                    width: calc(100% - 5em);
+                    // width: 100%;
                     overflow: hidden;
                     position: relative;
-                    display: inline-block;
+                    // display: inline-block;
                     transform: translateY(-0.9em);
                     margin-top: 1em;
 
@@ -694,18 +709,20 @@ body {
                     .hideableContent > *:last-child {
                         margin-bottom:0px !important; 
                     }
-                    
-                    // {default}
-                    margin-left: 1.5em;
-                    &#hideable1{border-left: 5px solid $logo-red;}
-                    &#hideable2{border-left: 5px solid $logo-green;}
-                    &#hideable3{border-left: 5px solid $logo-blue;}
                     padding-left: 1em;
                     @media (min-width: $bp-xs) {}
                     @media (min-width: $bp-s) {}
                     @media (min-width: $bp-m) {
-                        margin-left: 5em;
+                        padding-left: 6em;
                         border-left: none;
+                    }
+                    
+                    .hideableContent {
+                        padding-left: 1em;
+                        &#hideableContent1{border-left: 5px solid $logo-red;}
+                        &#hideableContent2{border-left: 5px solid $logo-green;}
+                        &#hideableContent3{border-left: 5px solid $logo-blue;}
+                        &#hideableContent4{border-left: 5px solid $logo-red;}
                     }
 
                     ul {
@@ -721,7 +738,25 @@ body {
                     
                     .hideableContent{
                         position: absolute;
-                        width: 100%
+                        // width: 100%;
+                        margin: 0px;
+
+                        table {
+                            border-collapse: collapse;
+                            width: 98%;
+                            margin: 0px 2px 2px 2px;
+                            th, td {
+                                border: 1px solid;
+                                padding: 0.5em;
+                            }
+
+                        }
+
+                        .tableLabel{
+                            text-align: center;
+                            font-size: 0.7em;
+                            opacity: 0.8;
+                        }
                     }
                 }
             }

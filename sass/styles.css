@@ -53,6 +53,13 @@ body .container {
 body .red-text {
   color: rgb(201, 66, 66);
 }
+body .code {
+  background-color: rgb(199, 199, 199);
+  color: black;
+  padding-left: 0.2em;
+  padding-right: 0.2em;
+  font-family: "Courier New", Courier, monospace;
+}
 body .red-text-flicker { /* Safari 4+ */ /* Fx 5+ */ /* Opera 12+ */
   animation: redflicker 3s infinite; /* IE 10+, Fx 29+ */
 }
@@ -314,7 +321,7 @@ body header .disabled {
   pointer-events: none;
 }
 body section {
-  padding: 3em 0em;
+  padding: 2em 0em;
 }
 body section#hero {
   padding-top: 8em;
@@ -526,6 +533,7 @@ body section#datacollection .card2 h2 {
   margin: 1em 0em;
 }
 body section#methods ul.method-list .methodItem {
+  position: relative;
   border-bottom: 2px solid rgb(177, 177, 177);
 }
 body section#methods ul.method-list .methodItem:last-child {
@@ -570,6 +578,12 @@ body section#methods ul.method-list .methodItem .tile button#pill3 {
 body section#methods ul.method-list .methodItem .tile button#pill3:hover {
   background-color: #07b2ef;
 }
+body section#methods ul.method-list .methodItem .tile button#pill4 {
+  background-color: rgb(201, 66, 66);
+}
+body section#methods ul.method-list .methodItem .tile button#pill4:hover {
+  background-color: #e09191;
+}
 body section#methods ul.method-list .methodItem .tile button.pill.expanded {
   transform: rotateZ(1turn);
 }
@@ -603,13 +617,10 @@ body section#methods ul.method-list .methodItem .tile .info .desc {
 body section#methods ul.method-list .methodItem .hideable {
   transition: all 0.3s ease-in-out;
   height: 0px;
-  width: calc(100% - 5em);
   overflow: hidden;
   position: relative;
-  display: inline-block;
   transform: translateY(-0.9em);
   margin-top: 1em;
-  margin-left: 1.5em;
   padding-left: 1em;
 }
 body section#methods ul.method-list .methodItem .hideable .hideableContent > *:first-child {
@@ -618,20 +629,26 @@ body section#methods ul.method-list .methodItem .hideable .hideableContent > *:f
 body section#methods ul.method-list .methodItem .hideable .hideableContent > *:last-child {
   margin-bottom: 0px !important;
 }
-body section#methods ul.method-list .methodItem .hideable#hideable1 {
-  border-left: 5px solid rgb(201, 66, 66);
-}
-body section#methods ul.method-list .methodItem .hideable#hideable2 {
-  border-left: 5px solid rgb(78, 130, 108);
-}
-body section#methods ul.method-list .methodItem .hideable#hideable3 {
-  border-left: 5px solid rgb(4, 104, 140);
-}
 @media (min-width: 1200px) {
   body section#methods ul.method-list .methodItem .hideable {
-    margin-left: 5em;
+    padding-left: 6em;
     border-left: none;
   }
+}
+body section#methods ul.method-list .methodItem .hideable .hideableContent {
+  padding-left: 1em;
+}
+body section#methods ul.method-list .methodItem .hideable .hideableContent#hideableContent1 {
+  border-left: 5px solid rgb(201, 66, 66);
+}
+body section#methods ul.method-list .methodItem .hideable .hideableContent#hideableContent2 {
+  border-left: 5px solid rgb(78, 130, 108);
+}
+body section#methods ul.method-list .methodItem .hideable .hideableContent#hideableContent3 {
+  border-left: 5px solid rgb(4, 104, 140);
+}
+body section#methods ul.method-list .methodItem .hideable .hideableContent#hideableContent4 {
+  border-left: 5px solid rgb(201, 66, 66);
 }
 body section#methods ul.method-list .methodItem .hideable ul li {
   list-style-type: disc;
@@ -642,7 +659,21 @@ body section#methods ul.method-list .methodItem .hideable ul li span.grey {
 }
 body section#methods ul.method-list .methodItem .hideable .hideableContent {
   position: absolute;
-  width: 100%;
+  margin: 0px;
+}
+body section#methods ul.method-list .methodItem .hideable .hideableContent table {
+  border-collapse: collapse;
+  width: 98%;
+  margin: 0px 2px 2px 2px;
+}
+body section#methods ul.method-list .methodItem .hideable .hideableContent table th, body section#methods ul.method-list .methodItem .hideable .hideableContent table td {
+  border: 1px solid;
+  padding: 0.5em;
+}
+body section#methods ul.method-list .methodItem .hideable .hideableContent .tableLabel {
+  text-align: center;
+  font-size: 0.7em;
+  opacity: 0.8;
 }
 body section#results .result-cards {
   display: flex;

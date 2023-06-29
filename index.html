@@ -322,6 +322,92 @@
 					</div>
 				</div>
 			</li>
+			<li class="methodItem">
+				<div class="tile">
+					<button type="button" onclick="methodClick(4)" id="pill4" class="pill"><span>+</span></button>
+					<div class="info">
+						<h2 class="title">Testing</h2>
+						<p class="desc">After getting a clearer picture of our data, we used Chi Square Test of Independence to determine whether there is a relationship between the appeals and average interaction of a tweet.</p>
+					</div>
+				</div>
+				<div id="hideable4" class="hideable">
+					<div id="hideableContent4" class="hideableContent">
+						<p>But first things first, there are two assumptions for this test.</p>
+						<ol>
+							<li>All expected counts are at least 5</li>
+							<li>Individual observations are independent and the population should be at least 10 times as large as the sample, (10n < N)</li>
+						</ol>
+						<p>We can assume #2 to always be true, and you can see in the table below that our dataset achieves the #1 since the lowest expected count is 5.4.</p>
+						<table>
+							<thead>
+								<th>Appeal</th>
+								<th>Interaction</th>
+								<th>Observed</th>
+								<th>Expected</th>
+							</thead>
+							<tr>
+								<td>Logic</td>
+								<td>Higher than Ave.</td>
+								<td>3</td>
+								<td>12.6</td>
+							</tr>
+							<tr>
+								<td>Logic</td>
+								<td>Lower than Ave.</td>
+								<td>60</td>
+								<td>50.4</td>
+							</tr>
+							<tr>
+								<td>Emotion</td>
+								<td>Higher than Ave.</td>
+								<td>21</td>
+								<td>16</td>
+							</tr>
+							<tr>
+								<td>Emotion</td>
+								<td>Lower than Ave.</td>
+								<td>59</td>
+								<td>64</td>
+							</tr>
+							<tr>
+								<td>Credibility</td>
+								<td>Higher than Ave.</td>
+								<td>10</td>
+								<td>5.4</td>
+							</tr>
+							<tr>
+								<td>Credibility</td>
+								<td>Lower than Ave.</td>
+								<td>17</td>
+								<td>21.6</td>
+							</tr>
+						</table>
+						<p class="tableLabel">Observed and Expected Values</p>
+						<p>Using <span class="code">stats</span> from <span class="code">scipy</span>, we got the following results from the test:</p>
+						<table>
+							<tr>
+								<th>Critical Value</th>
+								<td>5.99</td>
+								<th>Significance Level</th>
+								<td>0.05</td>
+							</tr>
+							<tr>
+								<th>Chi-Square Value</th>
+								<td>15.9941</td>
+								<th>Degrees of Freedom</th>
+								<td>2</td>
+							</tr>
+							<tr>
+								<th>P-value</th>
+								<td>0.0003</td>
+								<th></th>
+								<td></td>
+							</tr>
+						</table>
+						<p class="tableLabel">Chi Square Results</p>
+					</div>
+				</div>
+			</li>
 		</ul>
 
 	</section>
