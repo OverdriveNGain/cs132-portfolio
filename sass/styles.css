@@ -656,6 +656,7 @@ body section#methods ul.method-list .methodItem .hideable {
   transform: translateY(-0.9em);
   margin-top: 1em;
   padding-left: 1em;
+  
 }
 body section#methods ul.method-list .methodItem .hideable .hideableContent > *:first-child {
   margin-top: 0px !important;
