@@ -92,6 +92,21 @@ body ul {
 body .spacer {
   flex-grow: 1;
 }
+body .viewExternal {
+  text-decoration: none;
+  padding: 0em 0.5em;
+  border: 1px solid rgb(201, 66, 66);
+  color: rgb(201, 66, 66);
+}
+body .viewExternal .linkIcon {
+  width: 1em;
+  height: 1em;
+  vertical-align: middle;
+}
+body .viewExternal:hover {
+  background-color: rgb(201, 66, 66);
+  color: white;
+}
 body .split-3-2 {
   display: flex;
 }
@@ -632,7 +647,7 @@ body section#methods ul.method-list .methodItem .hideable .hideableContent {
 body section#results .result-cards {
   display: flex;
   flex-direction: row;
-  margin-bottom: 10em;
+  margin-bottom: 3em;
   gap: 1em;
 }
 @media (min-width: 0px) and (max-width: 1200px) {
@@ -640,13 +655,16 @@ body section#results .result-cards {
     flex-direction: column;
   }
 }
-body section#results .result-cards .card {
+body section#results .result-cards li {
+  flex: 1;
+}
+body section#results .result-cards li .card {
   background-color: black;
   color: white;
   padding: 2em;
   border-radius: 1em;
 }
-body section#results .result-cards .card p {
+body section#results .result-cards li .card p {
   margin-bottom: 0;
 }
 body section#results .result-cards h3 {

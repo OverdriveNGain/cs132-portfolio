@@ -101,6 +101,24 @@ body {
         flex-grow:1;
     }
 
+    .viewExternal{
+        text-decoration: none;
+        padding: 0em 0.5em;
+        border: 1px solid $logo-red;
+        color: $logo-red;
+
+        .linkIcon{
+            width: 1em;
+            height: 1em;
+            vertical-align: middle;
+        }
+
+        &:hover {
+            background-color: $logo-red;
+            color:white;
+        }
+    }
+
     // SPLIT 3-2
     .split-3-2{
         display: flex;
@@ -714,21 +732,25 @@ body {
         .result-cards {
             display: flex;
             flex-direction: row;
-            margin-bottom:10em;
+            margin-bottom:3em;
             gap:1em;
 
             @media (min-width: $bp-z) and (max-width: $bp-m){
                 flex-direction: column;
             }    
 
-            .card {
-                background-color: black;
-                color: white;
-                padding:2em;
-                border-radius: 1em;
-                
-                p {
-                    margin-bottom:0;
+            li {
+                flex: 1;
+
+                .card {
+                    background-color: black;
+                    color: white;
+                    padding:2em;
+                    border-radius: 1em;
+                    
+                    p {
+                        margin-bottom:0;
+                    }
                 }
             }
 
